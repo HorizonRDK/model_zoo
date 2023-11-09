@@ -31,6 +31,14 @@ This will specify the dataset path and run the docker in GPU mode (make sure tha
 <details open>
 <summary>Usage</summary>
 
+#### Export
+Pre-trained models `best_v{version}.pt` are provided (corresponding to versions described in the document released in Horizon Developer Community). They need to be converted into ONNX formats before "Build" and "Evaluate" stage:
+```bash
+# Step 1: Edit "export_onnx.py" file to specify path to the pre-trained model file
+# Step 2: Run the script
+python3 export_onnx.py
+```
+
 #### Build
 This will enable Horizon Algorithm Toolchain to automatically convert the ONNX model to formats ready for deployment on Horizon SoCs.
 ```bash
